@@ -57,22 +57,25 @@ To set up the backend of this project, follow these steps:
    
 3. **Install Required Backend Packages:**
 
-   Use pip to install the necessary Python packages for the backend. Run the following command to install them:
+   Use pip to install the necessary Python packages for the backend.
+   You will face some errors installing these packages, you can simply ignore them.
+
+   Run the following command to install python dependencies:
 
    ```bash
    pip install uvicorn ariadne pandas boto3 scikit-learn scikit-learn-extra seaborn fuzzy-c-means openpyxl
-   ```bash
+   
 
-   You will face some errors installing these packages, you can simply ignore them.
+   
 
-4. **Install HDBSCAN:**
+5. **Install HDBSCAN:**
 
    Install HDBSCAN using Conda from the conda-forge channel:
 
    ```bash
    conda install -c conda-forge hdbscan
 
-5. **Run the Backend Server:**
+6. **Run the Backend Server:**
 
    Navigate to your backend/server_files directory (with your_env_name activated), and then run the following command to start the backend server:
 
