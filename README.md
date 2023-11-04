@@ -21,4 +21,12 @@ To run the frontend of this project, follow these steps:
       After Node.js is installed, you can install Yarn globally with npm:
    ```bash
    npm install --global yarn
+## Running the Frontend
+
+4. **Install Frontend Dependencies:**
+
+   Navigate to the project's frontend directory and run the following command to install the necessary dependencies:
+
+   ```bash
+   yarn install
 
