@@ -1,0 +1,185 @@
+{
+    "projects": [
+        {
+            "name": "Project_1",
+            "datasets": [],
+            "configs": []
+        },
+        {
+            "name": "Project_2",
+            "datasets": [],
+            "configs": []
+        },
+        {
+            "name": "Project_3",
+            "datasets": [
+                {
+                    "name": "test_dataset_1",
+                    "fileName": "test1.xlsx",
+                    "description": "sadsda",
+                    "url": "Database\\Projects\\Project_3\\Datasets\\test_dataset_1\\test1.xlsx"
+                },
+                {
+                    "name": "test_dataset_2",
+                    "fileName": "test2.xlsx",
+                    "description": "sadasdsa",
+                    "url": "Database\\Projects\\Project_3\\Datasets\\test_dataset_2\\test2.xlsx"
+                },
+                {
+                    "name": "test_dataset_3",
+                    "fileName": "test3.xlsx",
+                    "description": "tesdt",
+                    "url": "Database\\Projects\\Project_3\\Datasets\\test_dataset_3\\test3.xlsx"
+                },
+                {
+                    "name": "test",
+                    "fileName": "test4.xlsx",
+                    "description": "dfsdf",
+                    "url": "Database\\Projects\\Project_3\\Datasets\\test\\test4.xlsx"
+                }
+            ],
+            "configs": [
+                {
+                    "name": "kmeans_3_on_test1",
+                    "parameters": [
+                        {
+                            "name": "numClusters",
+                            "value": "3"
+                        },
+                        {
+                            "name": "randomState",
+                            "value": "0"
+                        },
+                        {
+                            "name": "clusterDataOn",
+                            "value": "Hardness"
+                        },
+                        {
+                            "name": "project",
+                            "value": "Project_3"
+                        }
+                    ],
+                    "datasetName": "test_dataset_1",
+                    "rawData": "Database/Projects/Project_3/Cluster_Configs/kmeans_3_on_test1/raw_data.png",
+                    "clusteredData": "Database/Projects/Project_3/Cluster_Configs/kmeans_3_on_test1/clustered_data.png",
+                    "clustersFractions": "Database/Projects/Project_3/Cluster_Configs/kmeans_3_on_test1/clusters_fractions.png",
+                    "clusteredDataset": "Database/Projects/Project_3/Cluster_Configs/kmeans_3_on_test1/ClusteredData.xlsx",
+                    "label": "Hardness"
+                },
+                {
+                    "name": "birch_3_03_50_on_test1",
+                    "parameters": [
+                        {
+                            "name": "numClusters",
+                            "value": "3"
+                        },
+                        {
+                            "name": "threshold",
+                            "value": "0.3"
+                        },
+                        {
+                            "name": "branchingFactor",
+                            "value": "50"
+                        },
+                        {
+                            "name": "clusterDataOn",
+                            "value": "Hardness"
+                        },
+                        {
+                            "name": "project",
+                            "value": "Project_3"
+                        }
+                    ],
+                    "datasetName": "test_dataset_1",
+                    "rawData": "Database/Projects/Project_3/Cluster_Configs/birch_3_03_50_on_test1/raw_data.png",
+                    "clusteredData": "Database/Projects/Project_3/Cluster_Configs/birch_3_03_50_on_test1/clustered_data.png",
+                    "clustersFractions": "Database/Projects/Project_3/Cluster_Configs/birch_3_03_50_on_test1/clusters_fractions.png",
+                    "clusteredDataset": "Database/Projects/Project_3/Cluster_Configs/birch_3_03_50_on_test1/ClusteredData.xlsx",
+                    "label": "Hardness"
+                },
+                {
+                    "name": "agglo_3_ward_on_test1",
+                    "parameters": [
+                        {
+                            "name": "numClusters",
+                            "value": "3"
+                        },
+                        {
+                            "name": "linkage",
+                            "value": "ward"
+                        },
+                        {
+                            "name": "clusterDataOn",
+                            "value": "Hardness"
+                        },
+                        {
+                            "name": "project",
+                            "value": "Project_3"
+                        }
+                    ],
+                    "datasetName": "test_dataset_1",
+                    "rawData": "Database/Projects/Project_3/Cluster_Configs/agglo_3_ward_on_test1/raw_data.png",
+                    "clusteredData": "Database/Projects/Project_3/Cluster_Configs/agglo_3_ward_on_test1/clustered_data.png",
+                    "clustersFractions": "Database/Projects/Project_3/Cluster_Configs/agglo_3_ward_on_test1/clusters_fractions.png",
+                    "clusteredDataset": "Database/Projects/Project_3/Cluster_Configs/agglo_3_ward_on_test1/ClusteredData.xlsx",
+                    "label": "Hardness"
+                },
+                {
+                    "name": "gmm_3_on_test1",
+                    "parameters": [
+                        {
+                            "name": "numClusters",
+                            "value": "3"
+                        },
+                        {
+                            "name": "clusterDataOn",
+                            "value": "Hardness"
+                        },
+                        {
+                            "name": "project",
+                            "value": "Project_3"
+                        }
+                    ],
+                    "datasetName": "test_dataset_1",
+                    "rawData": "Database/Projects/Project_3/Cluster_Configs/gmm_3_on_test1/raw_data.png",
+                    "clusteredData": "Database/Projects/Project_3/Cluster_Configs/gmm_3_on_test1/clustered_data.png",
+                    "clustersFractions": "Database/Projects/Project_3/Cluster_Configs/gmm_3_on_test1/clusters_fractions.png",
+                    "clusteredDataset": "Database/Projects/Project_3/Cluster_Configs/gmm_3_on_test1/ClusteredData.xlsx",
+                    "label": "Hardness"
+                },
+                {
+                    "name": "kmeans_ontest_1_2",
+                    "parameters": [
+                        {
+                            "name": "numClusters",
+                            "value": "3"
+                        },
+                        {
+                            "name": "randomState",
+                            "value": "0"
+                        },
+                        {
+                            "name": "clusterDataOn",
+                            "value": "Hardness"
+                        },
+                        {
+                            "name": "project",
+                            "value": "Project_3"
+                        }
+                    ],
+                    "datasetName": "test_dataset_3",
+                    "rawData": "Database/Projects/Project_3/Cluster_Configs/kmeans_ontest_1_2/raw_data.png",
+                    "clusteredData": "Database/Projects/Project_3/Cluster_Configs/kmeans_ontest_1_2/clustered_data.png",
+                    "clustersFractions": "Database/Projects/Project_3/Cluster_Configs/kmeans_ontest_1_2/clusters_fractions.png",
+                    "clusteredDataset": "Database/Projects/Project_3/Cluster_Configs/kmeans_ontest_1_2/ClusteredData.xlsx",
+                    "label": "Hardness"
+                }
+            ]
+        },
+        {
+            "name": "test",
+            "datasets": [],
+            "configs": []
+        }
+    ]
+}

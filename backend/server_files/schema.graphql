@@ -1,0 +1,244 @@
+type Query {
+  "Lists all available clustering methods"
+  clusteringMethods: [ClusteringMethod]
+
+  "Searches for a clustering method given a name"
+  clusteringMethod(name: String): ClusteringMethod
+
+  "Lists all available datasets"
+  datasets(name:String): [Dataset]
+
+  "Searches for a dataset given a name"
+  dataset(name:String, pname:String):Dataset
+
+  configs(name:String):[Config]
+
+  config(name:String, pname:String):Config
+
+  clusteredDataset(name:String, pname:String):[DataPoint]
+
+  clusterComparisons(list:String, metric:String, pname:String):[ComparisonScores]
+
+  projects: [Project]
+  project(name:String):Project
+}
+
+"""
+A dataset
+"""
+type Dataset{
+  name:String,
+  fileName:String,
+  description:String
+  url:String
+}
+
+type Project{
+  name:String,
+  datasets:[Dataset],
+  configs:[Config],
+}
+
+type Config{
+  name:String, 
+  parameters:[Parameter], 
+  datasetName:String, 
+  rawData:String, 
+  clusteredData:String, 
+  clustersFractions:String,
+  clusteredDataset:String,
+  label:String,
+}
+type ComparisonScores{
+  clustername:String
+  metric:String
+  score:String
+}
+
+type DataPoint {
+  x: Float
+  y: Float
+  labeldata:String
+  cluster: Int
+}
+
+"""
+A mutation to upload and delete dataset
+"""
+type Mutation {
+  uploadDataset(name: String!, file:Upload!, description:String!, project:String): Dataset
+  deleteDataset(name: String!, project:String): Boolean
+  uploadConfig(name:String!, parameters:String!, datasetName:String!, label:String!, project:String):Config
+  deleteConfig(name: String!, datasetName:String!, project:String): Boolean
+  createProject(name:String!):Project
+  deleteProject(name: String!): Boolean
+}
+
+scalar Upload
+
+"""
+A result of a clustering method
+"""
+type Result {
+  error: String
+  rawData: String
+  clusteredData : String
+  clustersFractions : String
+}
+
+"""
+A clustering method
+"""
+interface ClusteringMethod {
+  "The name of the clustering method"
+  name: String
+  "The name of the clustering method to display top the user"
+  label: String
+  "The options for a clustering method"
+  options: [ClusteringOption]
+}
+
+"""
+The types available to a clustering option
+"""
+enum ClusteringOptionType {
+  INT
+  FLOAT
+  STRING
+  BOOLEAN
+}
+
+"""
+An option for a clustering method
+"""
+type ClusteringOption {
+  "The name of an option"
+  name: String
+  "The description for an option"
+  description: String
+  "The type of an option. Can be an integer, floating point number, string, or boolean"
+  type: ClusteringOptionType
+  "The default value for an option"
+  default: String
+  "If the option is required or not"
+  required: Boolean
+}
+type Parameter {
+  name:String
+  value:String
+}
+
+"""
+The K Means clustering method
+"""
+type KMeans implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(numClusters: String!, randomState: String!, datasetName:String!, clusterDataOn:String!,project:String): Result
+}
+
+"""
+The Birch clustering method
+"""
+type Birch implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(numClusters: String!,threshold:String! ,branching_factor:String!,datasetName:String, clusterDataOn:String!,project:String): Result
+}
+
+"""
+The Agglomarative clustering method
+"""
+type Agglomerative implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(numClusters: String!, linkage: String!, datasetName:String, clusterDataOn:String!,project:String): Result
+}
+
+"""
+The DBSCAN clustering method
+"""
+type DBSCAN implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(eps: String!, minSamples: String!, algorithm: String!, datasetName:String, clusterDataOn:String!,project:String): Result
+}
+
+"""
+The Deconvolution method
+"""
+type Deconvolution implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(mVal: String!, maxIter: String!, limit: String!, datasetName:String, clusterDataOn:String!,project:String): Result
+}
+
+"""
+The K Medoids clustering method
+"""
+type KMedoids implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(numClusters: String!, init: String!, randomState: String!, datasetName:String, clusterDataOn:String!,project:String): Result
+}
+
+"""
+The OPTICS clustering method
+"""
+type OPTICS implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(maxEps: String!, minSamples: String!, algorithm: String!, datasetName:String, clusterDataOn:String!,project:String): Result
+}
+
+type Fuzzycmeans implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(numClusters: String!, fuzzifier: String!, datasetName:String, clusterDataOn:String!,project:String): Result
+}
+
+type GaussianMixtureModel implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(numClusters: String!, datasetName:String, clusterDataOn:String!,project:String): Result
+}
+
+
+"""
+The spectral clustering method
+"""
+type Spectral implements ClusteringMethod {
+  name: String
+  label: String
+  options: [ClusteringOption]
+  cluster(
+    numClusters: String!
+    assignLabels: String!
+    affinity: String!
+    randomState: String!
+    datasetName:String
+    clusterDataOn:String!
+    project:String
+  ): Result
+}
+
+"""
+Subscriptions to receive updates sent from the server
+"""
+type Subscription {
+  "Provides the updates on the status of clustering operations"
+  clusterProgress: String
+}
+
+# TODO: Add descriptions to StringDefinitionsHelper and import them into the datafile
+# TODO: Add ranges for INT and FLOAT option types
+# TODO: Add ENUM type to options
