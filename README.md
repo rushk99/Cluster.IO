@@ -62,6 +62,8 @@ To set up the backend of this project, follow these steps:
    ```bash
    pip install uvicorn ariadne pandas boto3 scikit-learn scikit-learn-extra seaborn fuzzy-c-means openpyxl
 
+   You will face some errors installing these packages, you can simply ignore them.
+
 4. **Install HDBSCAN:**
 
    Install HDBSCAN using Conda from the conda-forge channel:
