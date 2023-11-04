@@ -1,0 +1,11 @@
+.leftSide {
+  width: 750px; /* 1500 * 0.5 */
+  float: left;
+  margin-left: -250px;
+  margin-top: -50px;
+}
+
+.rightSide {
+  margin-right: -250px;
+  background-color: yellow;
+}

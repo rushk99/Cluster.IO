@@ -1,0 +1,32 @@
+.leftSide {
+  width: 50%;
+  float: left;
+  outline-color: black;
+  outline-width: 1px;
+  outline-style: solid;
+  margin: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.midSide {
+  width: 25%;
+  float: left;
+  outline-color: black;
+  outline-width: 1px;
+  outline-style: solid;
+  margin: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.rightSide {
+  width: 25%;
+  float: left;
+  outline-color: black;
+  outline-width: 1px;
+  outline-style: solid;
+  margin: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

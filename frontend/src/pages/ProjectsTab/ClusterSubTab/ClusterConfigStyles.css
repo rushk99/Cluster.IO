@@ -1,0 +1,32 @@
+.window {
+    margin-left: 800px;
+    margin-top: -285px;
+    background-color: #C9D9D2;
+    width: 500px;
+}
+
+.config {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.clusterButton {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #63ace5;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.clusterButton:hover {
+    background-color: #408bcf;
+}
+
+.clusterOutput {
+    margin-left: 50px;
+    margin-top: -300px;
+}

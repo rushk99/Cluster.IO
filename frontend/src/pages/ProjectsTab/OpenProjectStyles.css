@@ -1,0 +1,16 @@
+/* Assuming you are applying these styles to some HTML elements with appropriate class names */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.leftSide {
+  width: fit-content;
+  margin-right: 8px; /* Use the desired spacing value here instead of `8px` */
+}
+
+.rightSide {
+  width: fit-content;
+  margin-left: 8px; /* Use the desired spacing value here instead of `8px` */
+}

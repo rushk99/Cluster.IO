@@ -1,0 +1,8 @@
+.leftSide {
+  width: calc(50% * getWidth());
+  float: left;
+}
+
+.rightSide {
+  margin-left: calc(50% * getWidth());
+}

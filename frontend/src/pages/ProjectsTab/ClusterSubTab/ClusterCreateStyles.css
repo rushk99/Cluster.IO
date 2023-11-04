@@ -1,0 +1,39 @@
+/* Assuming that the styles are applied to HTML elements with appropriate class names */
+
+.window {
+  margin-left: 250px;
+  margin-top: 100px;
+  background-color: #C9D9D2;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.dropDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.select {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  outline: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.selectOption {
+  padding: 10px;
+}

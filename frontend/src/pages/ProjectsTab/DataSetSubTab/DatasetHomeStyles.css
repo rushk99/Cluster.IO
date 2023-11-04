@@ -1,0 +1,15 @@
+/* Title, the top of the side bar where the project name is */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.leftSide {
+  width: fit-content;
+  margin-right: 16px; /* Assuming theme.spacing(2) is equivalent to 16px */
+}
+
+.rightSide {
+  width: fit-content;
+  margin-left: 16px; /* Assuming theme.spacing(2) is equivalent to 16px */
+}

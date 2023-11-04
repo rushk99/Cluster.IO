@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.clusterView {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftSide {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.rightSide {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.clusterName {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

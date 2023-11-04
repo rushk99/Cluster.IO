@@ -1,0 +1,23 @@
+/* .table */
+.table {
+  width: 400px;
+  margin-right: 250px;
+  float: right;
+  margin-top: 50px;
+}
+
+/* .title */
+.title {
+  background-color: #C9D9D2;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+/* .comparisonName */
+.comparisonName {
+  background-color: white;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
+}

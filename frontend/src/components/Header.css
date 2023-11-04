@@ -1,0 +1,9 @@
+
+.headerstyle {
+    display: flex;
+    color: blue;
+    justify-content: space-between;
+    align-items: left;
+    margin-bottom: 20px;
+  }
+  

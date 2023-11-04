@@ -1,0 +1,17 @@
+/* UserManualStyles.css */
+
+.root {
+  flex-grow: 1;
+}
+
+.paper {
+  padding: 16px;
+  text-align: left;
+  color: inherit;
+}
+
+.heading {
+  padding: 16px;
+  text-align: center;
+  color: inherit;
+}

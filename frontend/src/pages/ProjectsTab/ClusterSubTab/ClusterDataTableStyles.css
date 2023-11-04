@@ -1,0 +1,40 @@
+.table {
+  width: 400px;
+}
+
+.title {
+  background-color: #C9D9D2;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
+  margin-left: 3px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.outlined {
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.projectName {
+  background-color: white;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+.viewButton {
+  margin-top: 30px;
+}
+
+.paperStyle {
+  max-height: 350px;
+  z-index: -1;
+  overflow: auto;
+  width: 416.5px;
+  padding-right: 5px;
+  padding-left: 3px;
+}

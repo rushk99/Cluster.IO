@@ -1,0 +1,9 @@
+.root {
+  flex-grow: 1;
+}
+
+.paper {
+  padding: 16px; /* Assuming theme.spacing(2) = 16px */
+  text-align: center;
+  color: blue;
+}

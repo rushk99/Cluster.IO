@@ -1,0 +1,88 @@
+.window {
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: #C9D9D2;
+  padding: 24px; /* Assuming theme.spacing(3) is equivalent to 24px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px; /* Assuming theme.spacing(3) is equivalent to 24px */
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2); /* Assuming theme.shadows[3] adds a box shadow */
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px; /* Assuming theme.spacing(2) is equivalent to 16px */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 16px; /* Assuming theme.spacing(2) is equivalent to 16px */
+  padding: 12px; /* Assuming theme.spacing(1) is equivalent to 12px */
+  font-size: 18px;
+  border: 1px solid #1976D2; /* Assuming theme.palette.primary.main is a color value */
+  border-radius: 12px; /* Assuming theme.spacing(1) is equivalent to 12px */
+  transition: all 0.3s ease-in-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #f50057; /* Assuming theme.palette.secondary.main is a color value */
+}
+
+.fileInput {
+  display: none;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px; /* Assuming theme.spacing(1) is equivalent to 12px */
+}
+
+.button {
+  margin-top: 16px; /* Assuming theme.spacing(2) is equivalent to 16px */
+  background-color: #f50057; /* Assuming theme.palette.secondary.main is a color value */
+  color: #fff;
+  padding: 18px 36px; /* Assuming theme.spacing(1.5, 3) is equivalent to 18px 36px */
+  border-radius: 12px; /* Assuming theme.spacing(1) is equivalent to 12px */
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #c51162; /* Assuming theme.palette.secondary.dark is a color value */
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.4); /* Assuming theme.shadows[4] adds a box shadow */
+}
+
+.fileName {
+  font-size: 16px;
+  margin-top: 12px; /* Assuming theme.spacing(1) is equivalent to 12px */
+  text-align: center;
+}
+
+.uploadButton {
+  background-color: #1976D2; /* Assuming theme.palette.primary.main is a color value */
+  color: #fff;
+  padding: 12px 24px; /* Assuming theme.spacing(1, 2) is equivalent to 12px 24px */
+  border-radius: 12px; /* Assuming theme.spacing(1) is equivalent to 12px */
+  transition: all 0.3s ease-in-out;
+}
+
+.uploadButton:hover {
+  background-color: #1565C0; /* Assuming theme.palette.primary.dark is a color value */
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.4); /* Assuming theme.shadows[4] adds a box shadow */
+}

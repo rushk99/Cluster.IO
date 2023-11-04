@@ -1,0 +1,26 @@
+/* Paper */
+.paper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Avatar */
+.avatar {
+  margin: 1rem;
+  background-color: #2196F3; /* Your secondary color */
+}
+
+/* Form */
+.form {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Submit Button */
+.submit {
+  margin: 3rem 0 2rem;
+  background-color: #4CAF50; /* Your button background color */
+  color: white; /* Text color */
+}

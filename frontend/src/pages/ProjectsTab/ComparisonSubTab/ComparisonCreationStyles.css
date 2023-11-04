@@ -1,0 +1,16 @@
+/* Title, the top of the side bar where the project name is */
+.window {
+  width: 400px;
+  height: 300px;
+  margin-left: 250px;
+  margin-top: 100px;
+  background-color: #C9D9D2;
+}
+
+.createButton {
+  margin-top: 150px;
+}
+
+.text {
+  padding-top: 15px;
+}

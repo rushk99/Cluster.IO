@@ -1,0 +1,37 @@
+/* Title, the top of the side bar where the project name is */
+.table {
+  width: 600px;
+  padding: 20px;
+  margin: 50px;
+  background-color: #C9D9D2;
+  border-radius: 30px;
+  font-size: 34px;
+}
+
+.title {
+  background-color: #C9D9D2;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
+  margin-right: 50px;
+}
+
+.clusterName {
+  background-color: white;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
+  font-size: 24px;
+}
+
+.compareButton {
+  float: right;
+  margin-right: 100px;
+}
+
+hr {
+  margin: 16px 0;
+  padding: 0;
+  border: 0;
+  border-top: 3px solid #ccc;
+}

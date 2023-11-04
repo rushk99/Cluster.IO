@@ -1,0 +1,21 @@
+/* Title, the top of the side bar where the project name is */
+.window {
+  width: 600px;
+  height: 550px;
+  margin-top: 50px;
+  background-color: #C9D9D2;
+  margin: 0 auto;
+  margin-left: 500px;
+}
+
+.createButton {
+  margin-top: 100px;
+}
+
+.text {
+  padding-top: 15px;
+}
+
+.dropDown {
+  width: 300px;
+}
