@@ -1,4 +1,4 @@
-# clusterio
+# Cluster.IO
 
 # Frontend Setup Guide
 
