@@ -16,3 +16,9 @@ To run the frontend of this project, follow these steps:
 
    ```bash
    conda install -c conda-forge nodejs
+
+3. **Install Yarn:**
+      After Node.js is installed, you can install Yarn globally with npm:
+   ```bash
+   npm install --global yarn
+
