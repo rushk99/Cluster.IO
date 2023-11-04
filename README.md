@@ -30,3 +30,11 @@ To run the frontend of this project, follow these steps:
    ```bash
    yarn install
 
+   5. **Start the Frontend Server:**
+
+   Once the dependencies are installed, you can start the frontend server by running:
+
+   ```bash
+   yarn start
+
+
