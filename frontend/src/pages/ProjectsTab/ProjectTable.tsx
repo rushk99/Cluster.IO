@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Box, Button, ListItem, ListItemText } from '@mui/material';
 import { gql, useQuery, useMutation } from "@apollo/client";
 
@@ -34,18 +35,11 @@ const ProjectTable = () => {
 	const [open, setOpen] = React.useState(true);
 
 	const [deleteData, { data, loading, error }] = useMutation(DELETE_DATA);
+	const navigate = useNavigate();
 
-
-	//Expands main tabs(shows file name)
-	
-	const selectProject = (text: String, index: number) => {
-		selectedProject = index;
-		console.log("selectedComparison");
-		setOpen(!open);
-	};
 
     const viewProject = () => {
-		console.log("cluster");
+		navigate(`/Project/${selectedProjectName}/DataSet/Home/`);
 	}
 
 	const getData = useQuery(GET_DATA);
@@ -80,12 +74,10 @@ const ProjectTable = () => {
 			))}
   </Box>
   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-    <a href={"/Project/"+selectedProjectName+"/DataSet/Home"}>
       <Button variant="contained" disabled={selectedProject==-1} size="large" className="viewButton"
         onClick={() => { viewProject() }}>
         View Project
       </Button>
-    </a>
 	<Button variant="contained" disabled={selectedProject==-1} size="large" className="viewButton" onClick={(e:any) => { deleteData({variables:{name:selectedProjectName}}); }}>
 			  Delete Project
 	</Button>

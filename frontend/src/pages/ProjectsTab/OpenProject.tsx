@@ -1,4 +1,3 @@
-import React from 'react';
 import ProjectCreation from './ProjectCreation';
 import ProjectTable from './ProjectTable';
 

@@ -1,5 +1,5 @@
 import ProjectTopbar from './ProjectTopbar';
-import {  Routes, Route } from 'react-router-dom';
+import {  Routes , Route } from 'react-router-dom';
 import DataSetHome from './DataSetSubTab/DataSetHome';
 import ClusterHome from './ClusterSubTab/ClusterHome';
 import ComparisonHome from './ComparisonSubTab/ComparisonHome';
@@ -31,7 +31,7 @@ function getClusterName():String{
 
 
 
-const NewProject = () => {
+const ViewProject = () => {
 	const topbarStyle = {
     height: 60,
     cursor: "pointer", // Add cursor style to make it look clickable
@@ -43,11 +43,11 @@ const NewProject = () => {
 			</div>
 			<div >
 				<Routes>
-					<Route path={'/Project/'+getProjectName()+'/DataSet/Home'} Component={DataSetHome} />
-					<Route path={'/Project/'+getProjectName()+'/Cluster/Home'} Component={ClusterHome} />
-					<Route path={'/Project/'+getProjectName()+'/Comparison/Home'} Component={ComparisonHome} />
-					<Route path={'/Project/'+getProjectName()+'/Comparison/New'} Component={NewComparisonCreation} />
-					<Route path={'/Project/'+getProjectName()+'/Cluster/'+getClusterName()+'/view'} Component={ClusterView} />
+					<Route path={'/DataSet/Home/'} element={<DataSetHome />}/>
+					<Route path={'/Cluster/Home/'} element={<ClusterHome />} />
+					<Route path={'/Comparison/Home/'} element={<ComparisonHome />} />
+					<Route path={'/Comparison/New/'} element={<NewComparisonCreation />}/>
+					<Route path={'/Cluster/'+getClusterName()+'/view'} element={<ClusterView />} />
 				</Routes>
 			</div>
 		</div>
@@ -55,4 +55,4 @@ const NewProject = () => {
 };
 
 
-export default NewProject;
+export default ViewProject;

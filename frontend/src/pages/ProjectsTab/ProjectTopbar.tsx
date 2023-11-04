@@ -13,7 +13,7 @@ const ProjectTopbar = (props: { projName: String } ) => {
       <h1 style={{ fontSize: '24px', marginTop: "10px", width: "500px", textAlign: "left" }}>{props.projName}</h1>
       <NavMenu style={{ marginLeft: "0px" }}>
         <NavLink
-          to={'/Project/' + props.projName + '/DataSet/Home'}
+          to={'/Project/' + props.projName + '/DataSet/Home/'}
           style={({ isActive }) => ({
             fontSize: '24px',
             fontWeight: isActive ? "bold" : "",
@@ -24,7 +24,7 @@ const ProjectTopbar = (props: { projName: String } ) => {
         </NavLink>
         <ArrowRightAltIcon />
         <NavLink
-          to={'/Project/' + props.projName + '/Cluster/Home'}
+          to={'/Project/' + props.projName + '/Cluster/Home/'}
           style={({ isActive }) => ({
             fontSize: '24px',
             fontWeight: isActive ? "bold" : "",
@@ -35,7 +35,7 @@ const ProjectTopbar = (props: { projName: String } ) => {
         </NavLink>
         <ArrowRightAltIcon />
         <NavLink
-          to={'/Project/' + props.projName + '/Comparison/Home'}
+          to={'/Project/' + props.projName + '/Comparison/Home/'}
           style={({ isActive }) => ({
             fontSize: '24px',
             fontWeight: isActive ? "bold" : "",

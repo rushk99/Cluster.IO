@@ -6,6 +6,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.css'],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
@@ -33,6 +36,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '..', './build'),
+    publicPath: '/',
     filename: 'bundle.js',
   },
   mode: 'development',

@@ -1,4 +1,3 @@
-import React from 'react';
 import DataSetUpload from './DataSetUpload';
 import DataSetTable from './DataSetTable';
 
