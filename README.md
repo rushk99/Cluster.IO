@@ -71,10 +71,7 @@ To set up the backend of this project, follow these steps:
 
 5. **Run the Backend Server:**
 
-   Navigate to your backend/server_files directory(with your_env_name activated), and then run the following command to start the backend server:
+   Navigate to your backend/server_files directory (with your_env_name activated), and then run the following command to start the backend server:
 
    ```bash
    uvicorn server:app
-
-
-
