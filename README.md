@@ -63,7 +63,7 @@ To set up the backend of this project, follow these steps:
    Run the following command to install python dependencies:
 
    ```bash
-   pip install uvicorn ariadne pandas boto3 scikit-learn scikit-learn-extra seaborn fuzzy-c-means openpyxl
+   pip install uvicorn ariadne pandas boto3 scikit-learn scikit-learn-extra seaborn fuzzy-c-means openpyxl python-multipart
 
 5. **Install HDBSCAN:**
 
