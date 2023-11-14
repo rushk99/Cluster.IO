@@ -142,6 +142,7 @@ const ClusterTable = (props:any) => {
           <Button variant="contained" disabled={numSelected !== 1} size="large" className={styles.compareButton} onClick={(e) => {
             e.preventDefault();
             deleteConfig({ variables: { name: selectedFileName, datasetName: datasetName, project: project } });
+			setTimeout(() => window.location.reload(), 200);
           }}>
             Delete Cluster
           </Button>

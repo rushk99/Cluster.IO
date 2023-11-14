@@ -246,6 +246,7 @@ function RenderOutput(props: any) {
       <button disabled={!isNameValid} onClick={(e:any) => {
           e.preventDefault();
           addConfig({variables:{name:configName,  parameters:configDataString, datasetName:datasetName,label:clusterDataOn, project:project}});
+          setTimeout(() => window.location.reload(), 200);
         }}>Save configuration</button>
     </div>
   );

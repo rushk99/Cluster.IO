@@ -32,7 +32,6 @@ query getDatasets($project: String!) {
 `;
 
 
-
 ///////////////////////////////////////////////////////////////
 //            CSS
 ///////////////////////////////////////////////////////////////
@@ -101,7 +100,9 @@ const DataSetTable = () => {
               Perform Cluster
             </Button>
           </a>
-          <Button sx={{ float: 'right', marginRight: '15px', marginLeft: '15px', fontSize: '13px' }} variant="contained" disabled={selectedFile === -1} size="large" onClick={(e) => { deleteData({ variables: { name: selectedFileName, project: project } }); }}>
+          <Button sx={{ float: 'right', marginRight: '15px', marginLeft: '15px', fontSize: '13px' }} variant="contained" disabled={selectedFile === -1} size="large" onClick={(e) => { deleteData({ variables: { name: selectedFileName, project: project } });
+          setTimeout(() => window.location.reload(), 200);
+         }}>
             Delete Dataset
           </Button>
         </div>

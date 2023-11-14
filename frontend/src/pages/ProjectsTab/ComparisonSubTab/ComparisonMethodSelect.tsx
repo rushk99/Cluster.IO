@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import ComparisonOutput from './ComparisonOutput';
-import "./ComparisonMethodSelectStyles.css"
+import styles from "./ComparisonMethodSelectStyles.module.css"
 let method = "";
 
 
@@ -45,7 +45,7 @@ const ComparisonMethodSelect = () => {
 	/////////////////////////////////////////////////
 	return (
 		<div style={{ display: "flex", justifyContent: "space-between" }}>
-			<Box borderRadius="30px" className="window">
+			<Box borderRadius="30px" className={styles.window}>
 				<h1>
 					Select Comparison Method for: <br />
 					{selectedFileNames.map((fileName: any, index: any) => (
@@ -57,8 +57,8 @@ const ComparisonMethodSelect = () => {
 					))}
 				</h1>
 	
-				<FormControl className="dropDown">
-					<InputLabel id="dropdownLabel">Comparison Method</InputLabel>
+				<FormControl className={styles.dropDown}>
+					<InputLabel   id="dropdownLabel">Comparison Method</InputLabel>
 					<Select labelId="dropdownLabel" onChange={handleComparisonMethodChange}>
 						<MenuItem value={"calinski_harabasz_score"}>Calinski Harabasz Score</MenuItem>
 						<MenuItem value={"davies_bouldin_score"}>Davies Bouldin Score</MenuItem>
@@ -70,7 +70,7 @@ const ComparisonMethodSelect = () => {
 				<Button
 					variant="contained"
 					size="large"
-					className="createButton"
+					sx={{margin:"50px"}}
 					onClick={() => {
 						handleComparisonClick();
 					}}

@@ -32,6 +32,8 @@ const GET_DATA = gql`
   }
   `;
 
+
+
 ///////////////////////////////////////////////////////////////
 //            CSS
 ///////////////////////////////////////////////////////////////
@@ -116,6 +118,8 @@ const ProjectTable = () => {
     sx={buttoncss}
     onClick={(e: any) => {
       deleteData({ variables: { name: selectedProjectName } });
+      setTimeout(() => window.location.reload(), 200);
+
     }}
   >
     Delete Project

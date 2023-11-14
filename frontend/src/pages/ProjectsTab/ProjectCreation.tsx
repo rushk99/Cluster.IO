@@ -50,6 +50,7 @@ const ProjectCreation = () => {
 				addData({
 				  variables: { name: name},
 				});
+				setTimeout(() => window.location.reload(), 200);
 			  }}
 			>
 			  <label className={styles.label} htmlFor="name">

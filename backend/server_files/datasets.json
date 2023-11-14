@@ -124,33 +124,6 @@
                     "clustersFractions": "Database/Projects/Project_3/Cluster_Configs/gmm_3_on_test1/clusters_fractions.png",
                     "clusteredDataset": "Database/Projects/Project_3/Cluster_Configs/gmm_3_on_test1/ClusteredData.xlsx",
                     "label": "Hardness"
-                },
-                {
-                    "name": "kmeans_ontest_1_2",
-                    "parameters": [
-                        {
-                            "name": "numClusters",
-                            "value": "3"
-                        },
-                        {
-                            "name": "randomState",
-                            "value": "0"
-                        },
-                        {
-                            "name": "clusterDataOn",
-                            "value": "Hardness"
-                        },
-                        {
-                            "name": "project",
-                            "value": "Project_3"
-                        }
-                    ],
-                    "datasetName": "test_dataset_3",
-                    "rawData": "Database/Projects/Project_3/Cluster_Configs/kmeans_ontest_1_2/raw_data.png",
-                    "clusteredData": "Database/Projects/Project_3/Cluster_Configs/kmeans_ontest_1_2/clustered_data.png",
-                    "clustersFractions": "Database/Projects/Project_3/Cluster_Configs/kmeans_ontest_1_2/clusters_fractions.png",
-                    "clusteredDataset": "Database/Projects/Project_3/Cluster_Configs/kmeans_ontest_1_2/ClusteredData.xlsx",
-                    "label": "Hardness"
                 }
             ]
         }

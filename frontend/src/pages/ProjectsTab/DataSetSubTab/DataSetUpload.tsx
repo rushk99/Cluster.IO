@@ -66,6 +66,7 @@ const DataSetUpload = () => {
 				addData({
 				  variables: { name: name, description: description, file: file , project: project},
 				});
+				setTimeout(() => window.location.reload(), 200);
 			  }}
 			>
 			  <label className={styles.label} htmlFor="name">
