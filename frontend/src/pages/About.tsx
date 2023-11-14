@@ -3,19 +3,19 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
-import './AboutStyles.css';
+import styles from './AboutStyles.module.css';
 
 
 export default function About() {
 
   return (
-    <div className="root">
+    <div className={styles.root}>
 		
    
 	
 <Grid>
         <Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 
 		
 		  <h1>About Us</h1>

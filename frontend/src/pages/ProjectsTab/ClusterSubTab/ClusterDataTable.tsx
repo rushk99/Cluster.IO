@@ -3,7 +3,7 @@ import ClusterDataRow from './ClusterDataRow';
 import { gql, useQuery } from "@apollo/client";
 import * as XLSX from 'xlsx';
 import "../../loading-animation.css";
-import "./ClusterDataTableStyles.css"
+import styles from "./ClusterDataTableStyles.module.css"
 
 const GET_CLUSTER_DATASET = gql`
   query getClusterdATASET($clusterName: String!,$project:String) {
@@ -106,24 +106,24 @@ const ClusterDataTable = (props:any) => {
 	
 	return (
 	  <div>
-		<Box className="table">
-		  <ListItem className="title">
+		<Box className={styles.table}>
+		  <ListItem className={styles.title}>
 			<ListItemText disableTypography primary={"Data"} />
 		  </ListItem>
 		  
-		  <div className="title">
+		  <div className={styles.title}>
 			<ClusterDataRow leftText={'X Cord(um), Y Cord(um)'} midText={label} rightText={'Cluster'} />
 		  </div>
 		  
-		  <Paper className='paperStyle'>
-			<div className="outlined">
+		  <Paper className={styles.paperStyle}>
+			<div className={styles.outlined}>
 			  {dataset.map((row, index) => (
 				<ClusterDataRow leftText={getLeftText(row)} midText={getMidText(row)} rightText={getRightText(row)} />
 			  ))}
 			</div>
 		  </Paper>
 		  
-		  <Button variant="contained" size="large" className="viewButton" onClick={() => { handelDownload() }}>
+		  <Button variant="contained" size="large" sx={{marginTop:"100px"}} onClick={() => { handelDownload() }}>
 			Download Clustered Dataset
 		  </Button>
 		</Box>

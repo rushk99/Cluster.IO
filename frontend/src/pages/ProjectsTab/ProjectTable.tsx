@@ -1,9 +1,19 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Box, Button, ListItem, ListItemText } from '@mui/material';
+import {
+  Box,
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+  ListItem,
+  Button,
+  ListItemText,
+} from '@mui/material';
 import { gql, useQuery, useMutation } from "@apollo/client";
 
-import "./ProjectTableStyles.css"
+import styles from  "./ProjectTableStyles.module.css"
 
 let selectedProject = -1;
 let selectedProjectName: String="";
@@ -36,7 +46,13 @@ const ProjectTable = () => {
 
 	const [deleteData, { data, loading, error }] = useMutation(DELETE_DATA);
 	const navigate = useNavigate();
-
+	const buttoncss ={
+      float: 'right',
+      marginRight: '15px',
+      marginLeft: '15px',
+      marginTop: '10px',
+      fontSize: '13px',
+    };
 
     const viewProject = () => {
 		navigate(`/Project/${selectedProjectName}/DataSet/Home/`);
@@ -58,31 +74,55 @@ const ProjectTable = () => {
 	//                HTML
 	/////////////////////////////////////////////////
 	return (
-		<Box className="window">
-		<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-  <Box className="table">
-    <ListItem className="title">
-      <ListItemText style={{ fontSize: 40 }} disableTypography primary={"Existing Projects"} />
-    </ListItem>
-    {getData.data.projects.map((dataset:any ,index:any ) => (
-			  <div >
-				<ListItem  button selected={selectedProject==index} 
-				key={dataset.name} className="filename" onClick={() => { selectDataSet(dataset.name, index) }}>
-				  <ListItemText classes={{ primary: "listItemTextLarge" }} primary={dataset.name}  />
-				</ListItem>
-			  </ div>
-			))}
-  </Box>
+		<Box className={styles.window}>
+      <ListItem>
+        <ListItemText style={{ fontSize: 40 }} disableTypography primary={"Existing Projects"} />
+      </ListItem>
+      <Table>
+        <TableHead>
+        </TableHead>
+        <TableBody>
+          {getData.data.projects.map((dataset:any, index:any) => (
+            <TableRow
+              key={dataset.name}
+              selected={selectedProject === index}
+              className={styles.filename}
+              onClick={() => {
+                selectDataSet(dataset.name, index);
+              }}
+            >
+              <TableCell>{dataset.name}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <Button variant="contained" disabled={selectedProject==-1} size="large" className="viewButton"
-        onClick={() => { viewProject() }}>
-        View Project
-      </Button>
-	<Button variant="contained" disabled={selectedProject==-1} size="large" className="viewButton" onClick={(e:any) => { deleteData({variables:{name:selectedProjectName}}); }}>
-			  Delete Project
-	</Button>
-  </div>
-</div></Box>
+  <Button
+    variant="contained"
+    disabled={selectedProject === -1}
+    size="large"
+    sx={buttoncss}
+    onClick={() => {
+      viewProject();
+    }}
+  >
+    View Project
+  </Button>
+
+  <Button
+    variant="contained"
+    disabled={selectedProject === -1}
+    size="large"
+    sx={buttoncss}
+    onClick={(e: any) => {
+      deleteData({ variables: { name: selectedProjectName } });
+    }}
+  >
+    Delete Project
+  </Button>
+</div>
+
+</Box>
 	);
 };
 

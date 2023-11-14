@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { gql, useMutation } from "@apollo/client";
- import "./ProjectCreationStyles.css"
+import styles from "./ProjectCreationStyles.module.css"
 
 
 const ADD_DATA = gql`
@@ -41,10 +41,10 @@ const ProjectCreation = () => {
 	/////////////////////////////////////////////////
 	return (
 		<div>
-		  <Box className="window">
-			<h1 className="title">Create New Project</h1>
+		  <Box className={styles.window}>
+			<h1 className={styles.title}>Create New Project</h1>
 			<form
-			  className="form"
+			  className={styles.form}
 			  onSubmit={(e: any) => {
 				e.preventDefault();
 				addData({
@@ -52,13 +52,13 @@ const ProjectCreation = () => {
 				});
 			  }}
 			>
-			  <label className="label" htmlFor="name">
+			  <label className={styles.label} htmlFor="name">
 				Name:
 			  </label>
-			  <input className="input" type="text" id="name" value={name} onChange={handleNameChange} />
+			  <input className={styles.input} type="text" id="name" value={name} onChange={handleNameChange} />
 			  
         		{err && <div style={{ color: 'red' }}>{err}</div>}
-<button className="button" type="submit" disabled={!isNameValid}>
+<button className={styles.button} type="submit" disabled={!isNameValid}>
 Create
 </button>
 </form>

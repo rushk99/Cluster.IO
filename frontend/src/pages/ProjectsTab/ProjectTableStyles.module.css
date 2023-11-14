@@ -34,14 +34,10 @@
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-.viewButton {
-  float: right;
-  margin-right: 15px;
-  margin-left: 15px;
-  margin-top: 10px;
-  font-size: 13px;
-}
-
 .listItemTextLarge {
   font-size: 25px;
+}
+.selectedRow {
+  background-color: #c72727; /* Change this to your desired background color */
+  font-weight: bold; /* Change this to your desired text style */
 }

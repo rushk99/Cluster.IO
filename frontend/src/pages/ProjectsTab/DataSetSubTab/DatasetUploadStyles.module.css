@@ -47,7 +47,10 @@
 .fileInput {
   display: none;
 }
-
+.fileContainer {
+  display: flex;
+  align-items: center;
+}
 .label {
   font-size: 18px;
   font-weight: bold;
@@ -56,15 +59,15 @@
 
 .button {
   margin-top: 16px; /* Assuming theme.spacing(2) is equivalent to 16px */
-  background-color: #f50057; /* Assuming theme.palette.secondary.main is a color value */
+  background-color: #399937; /* Assuming theme.palette.secondary.main is a color value */
   color: #fff;
-  padding: 18px 36px; /* Assuming theme.spacing(1.5, 3) is equivalent to 18px 36px */
+  padding: 12px 24px; /* Assuming theme.spacing(1.5, 3) is equivalent to 18px 36px */
   border-radius: 12px; /* Assuming theme.spacing(1) is equivalent to 12px */
-  transition: all 0.3s ease-in-out;
+  
 }
 
 .button:hover {
-  background-color: #c51162; /* Assuming theme.palette.secondary.dark is a color value */
+  background-color: #47b645; /* Assuming theme.palette.secondary.dark is a color value */
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.4); /* Assuming theme.shadows[4] adds a box shadow */
 }
 
@@ -79,7 +82,7 @@
   color: #fff;
   padding: 12px 24px; /* Assuming theme.spacing(1, 2) is equivalent to 12px 24px */
   border-radius: 12px; /* Assuming theme.spacing(1) is equivalent to 12px */
-  transition: all 0.3s ease-in-out;
+  
 }
 
 .uploadButton:hover {

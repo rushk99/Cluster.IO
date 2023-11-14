@@ -6,7 +6,7 @@ import ClusterOutput from './ClusterOutput';
 //            CSS
 ///////////////////////////////////////////////////////////////
 
-import "./ClusterConfigStyles.css";
+import styles from "./ClusterConfigStyles.module.css";
 
 
 const GET_CLUSTER_CONFIG = gql`
@@ -60,12 +60,12 @@ function ClusterConfig(props: any) {
                     display="flex"
                     flexWrap="wrap"
                     borderRadius="30px"
-                    className="window"
+                    className={styles.window}
                 >
                     <form onSubmit={handleSubmit}>
                         {data.clusteringMethod.options.map(
                             (option: any, index: any) => (
-                                <div className="config">
+                                <div className={styles.config}>
                                     <h3>
                                         {index + 1}) Parameter :-{" "}
                                         {option.name}
@@ -95,7 +95,7 @@ function ClusterConfig(props: any) {
                                 </div>
                             )
                         )}
-                        <div className="config">
+                        <div className={styles.config}>
                             <h3>Select Cluster Data On:</h3>
                             <label>
                                 <input
@@ -128,7 +128,7 @@ function ClusterConfig(props: any) {
                             </label>
                         </div>
                         <br />
-                        <button className="clusterButton" type="submit">
+                        <button className={styles.clusterButton} type="submit">
                             Perform Clustering!
                         </button>
                     </form>
@@ -136,7 +136,7 @@ function ClusterConfig(props: any) {
             </div>
             {showDiv2 && (
                 <div style={{ flex: 1 }}>
-                    <div className="clusterOutput">
+                    <div className={styles.clusterOutput}>
                         <ClusterOutput
                             fdata={copyformData}
                             cname={clusterName}

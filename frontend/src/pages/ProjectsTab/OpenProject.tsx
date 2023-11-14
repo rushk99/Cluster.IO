@@ -1,38 +1,21 @@
+import Box from '@mui/material/Box';  
 import ProjectCreation from './ProjectCreation';
 import ProjectTable from './ProjectTable';
 
-import "./OpenProjectStyles.css"
-
+import styles from "./OpenProjectStyles.module.css";
 
 const OpenProject = () => {
-	///////////////////////////////////
-	///  Inner Handlers
-	///////////////////////////////
-
-	//Expands main tabs(shows file name)
-	/*
-	const handleExpandTab = (index: number) => {
-
-
-		tabsEnabled[index] = !tabsEnabled[index];
-		setOpen(!open);
-	};
-    */
-
-
-	////////////////////////////////////////////////////
-	//                HTML
-	/////////////////////////////////////////////////
-	return (
-		<div className="container">
-			<div className="leftSide" > 
+    
+    return (
+        <Box className={styles.container} display="flex">
+            <Box className={styles.leftSide}>
                 <ProjectCreation />
-		    </div>
-		    <div className="rightSide" > 
-			    <ProjectTable />
-		    </div>
-		</div>
-	);
+            </Box>
+            <Box className={styles.rightSide}>
+                <ProjectTable />
+            </Box>
+        </Box>
+    );
 };
 
 export default OpenProject;

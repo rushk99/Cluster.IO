@@ -390,14 +390,14 @@ async def resolve_deleteDataset(_,info,name, project="Default"):
 #     return False
 
 @mutation.field("deleteConfig")
-async def resolve_deleteConfig(_,info,name,datasetName, project="Default"):
+async def resolve_deleteConfig(_,info,name,datasetName, project):
     for temp in datasets["projects"]:
         if (temp["name"]==project):
             for ind,file in enumerate(temp["configs"]):
                 if (file["name"]==name):
                     
                     del temp["configs"][ind]
-
+                    
                     # Construct path to the directory to delete
                     path = os.path.join('Database', 'Projects', project, 'Cluster_Configs', name)
 

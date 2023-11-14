@@ -69,7 +69,7 @@ type Mutation {
   uploadDataset(name: String!, file:Upload!, description:String!, project:String): Dataset
   deleteDataset(name: String!, project:String): Boolean
   uploadConfig(name:String!, parameters:String!, datasetName:String!, label:String!, project:String):Config
-  deleteConfig(name: String!, datasetName:String!, project:String): Boolean
+  deleteConfig(name: String!, datasetName:String!, project:String!): Boolean
   createProject(name:String!):Project
   deleteProject(name: String!): Boolean
 }

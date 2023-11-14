@@ -1,8 +1,19 @@
 import React from 'react';
-import { Box, Button, ListItem, ListItemText } from '@mui/material';
+import {
+  Box,
+  Button,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  ListItem,
+  ListItemText,
+} from '@mui/material';
 import { gql, useQuery, useMutation } from "@apollo/client";
-import "./DatasetTableStyles.css"
-
+import styles from "./DatasetTableStyles.module.css"
+import ListItemButton from "@mui/material/ListItemButton"; 
 let selectedFile = -1;
 let selectedFileName: String="";
 
@@ -64,33 +75,39 @@ const DataSetTable = () => {
 	//                HTML
 	/////////////////////////////////////////////////
 	return (
-		<Box className="window">
-		<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-		  <Box className="table">
-			<ListItem key="title" className="title">
-			  <ListItemText style={{ fontSize: 40 }} disableTypography primary={"Existing Data Sets"} />
-			</ListItem>
-			{getData.data.datasets.map((dataset:any ,index:any ) => (
-			  <div >
-				<ListItem  button selected={selectedFile==index} 
-				key={dataset.name} className="fileName" onClick={() => { selectDataSet(dataset.name, index) }}>
-				  <ListItemText classes={{ primary: "listItemTextLarge" }} primary={dataset.name}  />
-				</ListItem>
-			  </ div>
-			))}
-		  </Box>
-		  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-			<a href={ selectedFile==-1 ? 'javascript:void(0)': "/Project/"+project+":-"+selectedFileName+"/Cluster/Home"  } style={{pointerEvents: selectedFile==-1 ? "none": "auto"}}>
-			  <Button variant="contained" disabled={selectedFile==-1} size="large" className="clusterButton"  onClick={() => { clusterData() }}>
-				Perform Cluster
-			  </Button>
-			</a>
-			<Button variant="contained" disabled={selectedFile==-1} size="large" className="clusterButton" onClick={(e:any) => { deleteData({variables:{name:selectedFileName, project:project}}); }}>
-			  Delete Dataset
-			</Button>
-		  </div>
-		</div></Box>
-	  );
+    <Box className={styles.window}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <TableContainer className={styles.table}>
+            <ListItemText style={{ fontSize: 35 }} disableTypography primary={"Existing Data Sets"} />
+          <Table>
+            <TableBody>
+              {getData.data.datasets.map((dataset:any, index:any) => (
+                <TableRow
+                  key={dataset.name}
+                  selected={selectedFile === index}
+                  onClick={() => {
+                    selectDataSet(dataset.name, index);
+                  }}
+                >
+                  <TableCell>{dataset.name}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <a href={selectedFile === -1 ? 'javascript:void(0)' : `/Project/${project}:-${selectedFileName}/Cluster/Home`} style={{ pointerEvents: selectedFile === -1 ? 'none' : 'auto' }}>
+            <Button sx={{ float: 'right', marginRight: '15px', marginLeft: '15px', fontSize: '13px' }} variant="contained" disabled={selectedFile === -1} size="large" onClick={() => { clusterData(); }}>
+              Perform Cluster
+            </Button>
+          </a>
+          <Button sx={{ float: 'right', marginRight: '15px', marginLeft: '15px', fontSize: '13px' }} variant="contained" disabled={selectedFile === -1} size="large" onClick={(e) => { deleteData({ variables: { name: selectedFileName, project: project } }); }}>
+            Delete Dataset
+          </Button>
+        </div>
+      </div>
+    </Box>
+  );
 };
 
 export default DataSetTable;

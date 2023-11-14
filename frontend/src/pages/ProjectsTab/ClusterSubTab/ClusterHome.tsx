@@ -2,7 +2,7 @@
 import ClusterCreate from './ClusterCreate';
 import ClusterTable from './ClusterTable';
 
-import "./ClusterHomeStyles.css";
+import styles from "./ClusterHomeStyles.module.css";
 
 ///////////////////////////////////////////////////////////////
 //            CSS
@@ -22,11 +22,11 @@ const ClusterHome = () => {
 	//                HTML
 	/////////////////////////////////////////////////
 	return (
-		<div>
-			<div className="leftSide" > 
+		<div >
+			<div className={styles.leftSide} > 
                 <ClusterCreate project={project} />
 		    </div>
-		    <div className="rightSide" > 
+		    <div className={styles.rightSide} > 
 			    <ClusterTable project={project}/>
 		    </div>
 		</div>

@@ -2,17 +2,17 @@
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-import './UserManualStyles.css';
+import styles from './UserManualStyles.module.css';
 
 
 export default function UserManual() {
 
   return (
-    <div className="root">
+    <div className={styles.root}>
 		
       <Grid container spacing={0}>
         <Grid item xs={12}>
-          <Paper className="heading">
+          <Paper className={styles.heading}>
 
 		
 			  <h1>User Manual</h1>
@@ -20,7 +20,7 @@ export default function UserManual() {
 		  </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		<h2>Clustering Methods</h2>
 		<h3>KMeans</h3>
@@ -38,7 +38,7 @@ export default function UserManual() {
 			  
         </Grid>
         <Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		  <h3>KMedoids</h3>
 		  <h5>In k-medoids clustering, each cluster is represented by one of the data points in the cluster, 
@@ -53,7 +53,7 @@ export default function UserManual() {
 		  </Paper>
         </Grid>
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		  <h3>Fuzzy C-Means</h3>
 		  <h5>This algorithm works by assigning membership to each data point corresponding 
@@ -64,7 +64,7 @@ export default function UserManual() {
 		  </Paper>
         </Grid>
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		  <h3>Gaussian Mixture Model</h3>
 		  <h5>A Gaussian mixture model involves the mixture of multiple Gaussian distributions. 
@@ -76,7 +76,7 @@ export default function UserManual() {
 		  </Paper>
         </Grid>
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		  <h3>Agglomerative</h3>
 		  <h5>Agglomerative clustering is a hierarchical Algorithm that constructs a dendrogram or tree-like structure 
@@ -89,7 +89,7 @@ export default function UserManual() {
 		  </Paper>
         </Grid>
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		  <h3>Birch</h3>
 		  <h5>Balanced iterative Reducing and Clustering Hierarchies (BIRCH) introduces a data structure called a Clustering Feature Tree (CFT), 
@@ -105,7 +105,7 @@ However, BIRCH can be sensitive to the choice of parameters, such as the thresho
 		  </Paper>
         </Grid>
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		  <h3>Optics</h3>
 		  <h5> In the OPTICS algorithm, every individual data point is assigned a reachability distance, 
@@ -120,7 +120,7 @@ which determines the maximum reachability distance that a point can be considere
 		  </Paper>
         </Grid>
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		  <h3>DBSCAN</h3>
 		  <h5>In the DBSCAN method, each data point is assigned a density, defined by the number of points 
@@ -138,7 +138,7 @@ which determines the maximum reachability distance that a point can be considere
         </Grid>
 
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		<h2>Comparison Methods</h2>
 		<h3>Silhouette Coefficient</h3>
@@ -161,7 +161,7 @@ which determines the maximum reachability distance that a point can be considere
 			  
         </Grid>
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		<h3>Calinski-Harabasz Index</h3>
 		  <h5>The Calinski-Harabasz index,
@@ -184,7 +184,7 @@ which determines the maximum reachability distance that a point can be considere
 			  
         </Grid>
 		<Grid item xs={12}>
-          <Paper className="paper">
+          <Paper className={styles.paper}>
 			  
 		<h3>Davies-Bouldin index</h3>
 		  <h5>The Davies-Bouldin index (DB

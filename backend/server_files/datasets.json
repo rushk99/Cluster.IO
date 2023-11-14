@@ -1,16 +1,6 @@
 {
     "projects": [
         {
-            "name": "Project_1",
-            "datasets": [],
-            "configs": []
-        },
-        {
-            "name": "Project_2",
-            "datasets": [],
-            "configs": []
-        },
-        {
             "name": "Project_3",
             "datasets": [
                 {
@@ -20,22 +10,10 @@
                     "url": "Database\\Projects\\Project_3\\Datasets\\test_dataset_1\\test1.xlsx"
                 },
                 {
-                    "name": "test_dataset_2",
-                    "fileName": "test2.xlsx",
-                    "description": "sadasdsa",
-                    "url": "Database\\Projects\\Project_3\\Datasets\\test_dataset_2\\test2.xlsx"
-                },
-                {
                     "name": "test_dataset_3",
                     "fileName": "test3.xlsx",
                     "description": "tesdt",
                     "url": "Database\\Projects\\Project_3\\Datasets\\test_dataset_3\\test3.xlsx"
-                },
-                {
-                    "name": "test",
-                    "fileName": "test4.xlsx",
-                    "description": "dfsdf",
-                    "url": "Database\\Projects\\Project_3\\Datasets\\test\\test4.xlsx"
                 }
             ],
             "configs": [
@@ -175,11 +153,6 @@
                     "label": "Hardness"
                 }
             ]
-        },
-        {
-            "name": "test",
-            "datasets": [],
-            "configs": []
         }
     ]
 }

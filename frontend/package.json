@@ -37,6 +37,7 @@
     "style-loader": "^3.3.3",
     "styled-components": "^6.1.0",
     "typescript": "^5.2.2",
+    "typescript-plugin-css-modules": "^5.0.2",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

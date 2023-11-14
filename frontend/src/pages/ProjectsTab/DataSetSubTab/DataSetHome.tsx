@@ -2,7 +2,7 @@ import DataSetUpload from './DataSetUpload';
 import DataSetTable from './DataSetTable';
 
 
-import "./DatasetHomeStyles.css"
+import styles from "./DatasetHomeStyles.module.css"
 
 
 ///////////////////////////////////////////////////////////////
@@ -30,11 +30,11 @@ const DataSetHome = () => {
 	//                HTML
 	/////////////////////////////////////////////////
 	return (
-		<div className="container">
-		  <div className="leftSide"> 
+		<div className={styles.container}>
+		  <div className={styles.leftSide}> 
 			<DataSetUpload />
 		  </div>
-		  <div className="rightSide"> 
+		  <div className={styles.rightSide}> 
 			<DataSetTable />
 		  </div>
 		</div>

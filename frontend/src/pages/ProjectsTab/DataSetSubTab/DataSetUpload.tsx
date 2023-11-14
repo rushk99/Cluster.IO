@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import { gql, useMutation } from "@apollo/client";
 
-import "./DatasetUploadStyles.css"
+import styles from "./DatasetUploadStyles.module.css"
 
 
 ///////////////////////////////////////////////////////////////
@@ -57,10 +57,10 @@ const DataSetUpload = () => {
 	/////////////////////////////////////////////////
 	return (
 		<div>
-		  <Box className="window">
-			<h1 className="title">Upload New Data Set</h1>
+		  <Box className={styles.window}>
+			<h1 className={styles.title}>Upload New Data Set</h1>
 			<form
-			  className="form"
+			  className={styles.form}
 			  onSubmit={(e: any) => {
 				e.preventDefault();
 				addData({
@@ -68,48 +68,49 @@ const DataSetUpload = () => {
 				});
 			  }}
 			>
-			  <label className="label" htmlFor="name">
+			  <label className={styles.label} htmlFor="name">
 				Name:
 			  </label>
 
-				<input className="input" type="text" id="name" value={name} onChange={handleNameChange} />
+				<input className={styles.input} type="text" id="name" value={name} onChange={handleNameChange} />
 							
 				{err && <div style={{ color: 'red' }}>{err}</div>}
 
 
 
-			  <label className="label" htmlFor="description">
+			  <label className={styles.label} htmlFor="description">
 				Description:
 			  </label>
 			  <textarea
-				className="input"
+				className={styles.input}
 				id="description"
 				value={description}
 				onChange={(e) => setDescription(e.target.value)}
 			  />
-			  <label className="label" htmlFor="file">
+			  <label className={styles.label} htmlFor="file">
 				Choose a file
 			  </label>
-			  <div>
-				<input
-				  className="fileInput"
-				  type="file"
-				  id="file"
-				  onChange={(e: any) => {
-					setFile(e.target.files[0]);
-}}
-/>
-<label htmlFor="file" className="uploadButton">
-Browse...
-</label>
+			  <div className={styles.fileContainer}>
+  <input
+    className={styles.fileInput}
+    type="file"
+    id="file"
+    onChange={(e: any) => {
+      setFile(e.target.files[0]);
+    }}
+  />
+  <label htmlFor="file" className={styles.uploadButton}>
+    Browse...
+  </label>
 </div>
 {file && (
-<p className="fileName">
-File Selected: <strong>{file.name}</strong>
-</p>
+  <p className={styles.fileName}>
+    File Selected: <strong>{file.name}</strong>
+  </p>
 )}
-<button className="button" type="submit" disabled={!isNameValid}>
-Upload
+
+<button className={styles.button} type="submit" disabled={!isNameValid}>
+  Upload
 </button>
 </form>
 </Box>

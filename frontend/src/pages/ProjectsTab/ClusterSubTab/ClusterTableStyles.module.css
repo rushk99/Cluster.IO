@@ -1,9 +1,7 @@
 .table {
   width: 400px;
-  margin-right: 250px;
   float: right;
   margin-top: 50px;
-  margin-left: 250px;
   background-color: #C9D9D2;
   padding: 30px;
   border-radius: 30px;
@@ -28,4 +26,9 @@
   float: right;
   margin-top: 30px;
   margin-right: 5px;
+}
+
+.compareButton2{
+
+  margin-top: 10px;
 }

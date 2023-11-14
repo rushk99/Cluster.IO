@@ -47,7 +47,7 @@ const ViewProject = () => {
 					<Route path={'/Cluster/Home/'} element={<ClusterHome />} />
 					<Route path={'/Comparison/Home/'} element={<ComparisonHome />} />
 					<Route path={'/Comparison/New/'} element={<NewComparisonCreation />}/>
-					<Route path={'/Cluster/'+getClusterName()+'/view'} element={<ClusterView />} />
+					<Route path={'/Cluster/'+getClusterName()+'/view/*'} element={<ClusterView />} />
 				</Routes>
 			</div>
 		</div>

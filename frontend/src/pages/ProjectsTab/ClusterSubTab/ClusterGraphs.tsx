@@ -3,6 +3,8 @@ import {  Button} from '@mui/material';
 import ArrowBack from '@mui/icons-material/ArrowBack';
 import ArrowForward from '@mui/icons-material/ArrowForward';
 import { gql, useQuery } from "@apollo/client";
+
+
 import "../../loading-animation.css";
 
 
@@ -14,7 +16,6 @@ const GET_CLUSTER_OUTPUT = gql`
   }
 `;
 
-let imageIndex = 0;
 
 
 

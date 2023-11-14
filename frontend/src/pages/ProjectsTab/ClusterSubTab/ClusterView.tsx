@@ -3,7 +3,7 @@
 import ClusterGraphs from'./ClusterGraphs';
 import ClusterDataTable from'./ClusterDataTable';
 
-import "./ClusterViewStyles.css";
+import styles from "./ClusterViewStyles.module.css";
 
 
 ///////////////////////////////////////////////////////////////
@@ -32,12 +32,12 @@ const ClusterView = () => {
 	//                HTML
 	/////////////////////////////////////////////////
 	return (
-		<div className="container">
-		  <div className="clusterView">
-			<div className="leftSide">
+		<div className={styles.container}>
+		  <div className={styles.clusterView}>
+			<div className={styles.leftSide}>
 			  <ClusterGraphs clusterName={clusterName} project={project} />
 			</div>
-			<div className="rightSide">
+			<div className={styles.rightSide}>
 			  <ClusterDataTable clusterName={clusterName} project={project} />
 			</div>
 		  </div>

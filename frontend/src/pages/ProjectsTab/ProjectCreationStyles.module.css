@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 24px; /* equivalent to theme.spacing(3) */
+  border-radius: 24px; 
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); /* equivalent to theme.shadows[3] */
 }
 
@@ -34,7 +34,7 @@
   margin-bottom: 16px; /* equivalent to theme.spacing(2) */
   padding: 8px; /* equivalent to theme.spacing(1) */
   font-size: 18px;
-  border: 1px solid #1976D2; /* Use your primary color instead */
+  border: 1px solid #1976D2;
   border-radius: 8px; /* equivalent to theme.spacing(1) */
   transition: all 0.3s ease-in-out;
 }

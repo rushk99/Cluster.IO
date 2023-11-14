@@ -1,7 +1,7 @@
 import React  from 'react';
 import { Box, ListItem, ListItemText,ListItemButton  } from '@mui/material';
 
-import "./ComparisonTableStyles.css";
+import styles from "./ComparisonTableStyles.module.css";
 const comparisonNames = ["PVC", "AVB", "K Mean V K Nice"];
 let selectedComparison = -1;
 
@@ -42,8 +42,8 @@ const ComparisonTable = () => {
 	/////////////////////////////////////////////////
 	return (
 		<div>
-			<Box className="table">
-				<ListItem className="title">
+			<Box className={styles.table}>
+				<ListItem className={styles.title}>
 					<ListItemText disableTypography primary={"Existing Comparisons"} />
 				</ListItem>
 					{getComparisonNames().map((text, index) => (
@@ -51,7 +51,7 @@ const ComparisonTable = () => {
 							<ListItemButton
   selected={selectedComparison === index}
   key={text}
-  className="comparisonName"
+  className={styles.comparisonName}
   onClick={() => selectComparison(text, index)}
 >
   <ListItemText primary={text} />

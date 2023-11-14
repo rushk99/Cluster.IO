@@ -7,7 +7,7 @@ import ClusterConfig from './ClusterConfig';
 //            CSS
 ///////////////////////////////////////////////////////////////
 
-import "./ClusterCreateStyles.css";
+import styles from "./ClusterCreateStyles.module.css";
 
 const GET_CLUSTER = gql`
 	query{clusteringMethods{name}}
@@ -22,7 +22,6 @@ const ClusterCreate = (props:any) => {
   	const [selectedOption, setSelectedOption] = useState("");
 	//Expands main tabs(shows file name)
 	const getCluster = useQuery(GET_CLUSTER);
-	const [showDiv1, setShowDiv1] = useState(true);
 	const [showDiv2, setShowDiv2] = useState(false);
 	if (getCluster.loading){
 		return <div>loading...</div>
@@ -38,15 +37,15 @@ const ClusterCreate = (props:any) => {
 	/////////////////////////////////////////////////
 	return (
 		<div>
-		  <Box display="flex" flexWrap="wrap" className="window">
+		  <Box display="flex" flexWrap="wrap" className={styles.window}>
 			<div>
-			  <h1 className="title">Create a New Cluster Configuration</h1>
-			  <div className="dropDown">
-				<select value={selectedOption} className='select' onChange={(e) => { setSelectedOption(e.target.value);
+			  <h1 className={styles.title}>Create a New Cluster Configuration</h1>
+			  <div className={styles.dropDown}>
+				<select value={selectedOption} className={styles.select} onChange={(e) => { setSelectedOption(e.target.value);
 																				setShowDiv2(true); }}>
 				  <option value="" disabled>--Select a Clustering Algorithm--</option>
 				  {getCluster.data.clusteringMethods.map((cluster:any) => (
-					<option key={cluster.name} value={cluster.name} className="selectOption">
+					<option key={cluster.name} value={cluster.name} className={styles.selectOption}>
 					  {cluster.name}
 					</option>
 				  ))}
